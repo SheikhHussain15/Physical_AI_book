@@ -1,0 +1,10 @@
+# Docusaurus
+.docusaurus/
+.cache-loader/
+build/
+node_modules/
+package-lock.json
+src/
+static/
+.env*
+README.md
