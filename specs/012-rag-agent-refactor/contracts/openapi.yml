@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: RAG Chatbot API
+  version: 1.0.0
+paths:
+  /chat:
+    post:
+      summary: Get a response from the chatbot
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: A successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+components:
+  schemas:
+    ChatRequest:
+      type: object
+      properties:
+        question:
+          type: string
+          description: The user's question.
+    ChatResponse:
+      type: object
+      properties:
+        answer:
+          type: string
+          description: The chatbot's answer.
+        sources:
+          type: array
+          items:
+            type: string
+          description: A list of source URLs.

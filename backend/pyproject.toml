@@ -1,0 +1,20 @@
+[project]
+name = "rag-backend"
+version = "0.1.0"
+dependencies = [
+    "cohere",
+    "qdrant-client",
+    "beautifulsoup4",
+    "requests",
+    "langchain",
+    "langchain-text-splitters",
+    "python-dotenv",
+    "pytest",
+    "fastapi",
+    "openai",
+    "uvicorn",
+    "langchain",
+]
+
+[tool.setuptools]
+py_modules = ["main", "agent_service", "retrieval_validation"]
