@@ -21,11 +21,11 @@
 
 **Purpose**: Project initialization and basic structure.
 
-- [ ] T001 Create the project directory `backend/src`.
-- [ ] T002 Initialize `uv` in the `backend/` directory.
-- [ ] T003 Create `backend/requirements.txt` with initial dependencies: `requests`, `beautifulsoup4`, `cohere`, `qdrant-client`, `python-dotenv`.
-- [ ] T004 Create the main entry file `backend/src/main.py`.
-- [ ] T005 Create a placeholder `.env` file in the `backend` directory.
+- [X] T001 Create the project directory `backend/src`.
+- [X] T002 Initialize `uv` in the `backend/` directory.
+- [X] T003 Create `backend/requirements.txt` with initial dependencies: `requests`, `beautifulsoup4`, `cohere`, `qdrant-client`, `python-dotenv`.
+- [X] T004 Create the main entry file `backend/src/main.py`.
+- [X] T005 Create a placeholder `.env` file in the `backend` directory.
 
 ---
 
@@ -33,10 +33,10 @@
 
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented.
 
-- [ ] T006 [P] In `backend/src/main.py`, implement a function to load environment variables from the `.env` file.
-- [ ] T007 [P] In `backend/src/main.py`, implement a function to initialize and return the Cohere client.
-- [ ] T008 [P] In `backend/src/main.py`, implement a function to initialize and return the Qdrant client.
-- [ ] T009 In `backend/src/main.py`, implement a function to create and configure the Qdrant collection if it doesn't exist.
+- [X] T006 [P] In `backend/src/main.py`, implement a function to load environment variables from the `.env` file.
+- [X] T007 [P] In `backend/src/main.py`, implement a function to initialize and return the Cohere client.
+- [X] T008 [P] In `backend/src/main.py`, implement a function to initialize and return the Qdrant client.
+- [X] T009 In `backend/src/main.py`, implement a function to create and configure the Qdrant collection if it doesn't exist.
 
 **Checkpoint**: Foundation ready - user story implementation can now begin.
 
@@ -50,13 +50,13 @@
 
 ### Implementation for User Story 1
 
-- [ ] T010 [US1] In `backend/src/main.py`, implement a function `fetch_html(url)` to get the HTML content of a page.
-- [ ] T011 [US1] In `backend/src/main.py`, implement a crawler function `crawl_site(start_url)` that discovers all unique, same-domain URLs starting from the `start_url`.
-- [ ] T012 [US1] In `backend/src/main.py`, implement a function `extract_text_from_html(html)` to parse HTML using BeautifulSoup and extract the main text content.
-- [ ] T013 [US1] In `backend/src/main.py`, implement a function `chunk_text(text)` for custom character or token-based text splitting.
-- [ ] T014 [US1] In `backend/src/main.py`, implement a function `generate_embeddings(chunks)` that uses the Cohere client to generate embeddings for a list of text chunks.
-- [ ] T015 [US1] In `backend/src/main.py`, implement a function `store_in_qdrant(chunks, embeddings)` to save the data to the Qdrant collection.
-- [ ] T016 [US1] In `backend/src/main.py`, implement the main orchestration function `run_ingestion_pipeline(start_url)` that calls the functions from T010-T015 in sequence.
+- [X] T010 [US1] In `backend/src/main.py`, implement a function `fetch_html(url)` to get the HTML content of a page.
+- [X] T011 [US1] In `backend/src/main.py`, implement a crawler function `crawl_site(start_url)` that discovers all unique, same-domain URLs starting from the `start_url`.
+- [X] T012 [US1] In `backend/src/main.py`, implement a function `extract_text_from_html(html)` to parse HTML using BeautifulSoup and extract the main text content.
+- [X] T013 [US1] In `backend/src/main.py`, implement a function `chunk_text(text)` for custom character or token-based text splitting.
+- [X] T014 [US1] In `backend/src/main.py`, implement a function `generate_embeddings(chunks)` that uses the Cohere client to generate embeddings for a list of text chunks.
+- [X] T015 [US1] In `backend/src/main.py`, implement a function `store_in_qdrant(chunks, embeddings)` to save the data to the Qdrant collection.
+- [X] T016 [US1] In `backend/src/main.py`, implement the main orchestration function `run_ingestion_pipeline(start_url)` that calls the functions from T010-T015 in sequence.
 
 **Checkpoint**: User Story 1 should be fully functional.
 
@@ -70,8 +70,8 @@
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] In `backend/src/main.py`, implement a function `search(query)` that takes a text query, generates an embedding for it, and performs a search in the Qdrant collection.
-- [ ] T018 [US2] In `backend/src/main.py`, enhance the main execution block to handle command-line arguments, allowing the user to either run the ingestion pipeline or perform a search. For example: `python src/main.py --ingest --url <url>` or `python src/main.py --search "my query"`.
+- [X] T017 [US2] In `backend/src/main.py`, implement a function `search(query)` that takes a text query, generates an embedding for it, and performs a search in the Qdrant collection.
+- [X] T018 [US2] In `backend/src/main.py`, enhance the main execution block to handle command-line arguments, allowing the user to either run the ingestion pipeline or perform a search. For example: `python src/main.py --ingest --url <url>` or `python src/main.py --search "my query"`.
 
 **Checkpoint**: User Story 2 is testable and provides a way to validate the pipeline.
 
@@ -81,10 +81,10 @@
 
 **Purpose**: Improvements that affect the overall quality of the script.
 
-- [ ] T019 [P] Add comprehensive logging throughout all functions in `backend/src/main.py`.
-- [ ] T020 [P] Implement robust error handling (e.g., for network issues, API errors) in `backend/src/main.py`.
-- [ ] T021 [P] Refine the command-line interface in `backend/src/main.py` for better usability.
-- [ ] T022 Validate the process by running through the steps in `quickstart.md`.
+- [X] T019 [P] Add comprehensive logging throughout all functions in `backend/src/main.py`.
+- [X] T020 [P] Implement robust error handling (e.g., for network issues, API errors) in `backend/src/main.py`.
+- [X] T021 [P] Refine the command-line interface in `backend/src/main.py` for better usability.
+- [X] T022 Validate the process by running through the steps in `quickstart.md`.
 
 ---
 
